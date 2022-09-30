@@ -82,4 +82,6 @@ git conf --list --show-origin: para mostrar las configuraciones y sus rutas
 git rm --cached nombre_del_archivo.txt: para eliminar el archivo del staged(ram)
 git rm nombre_del_archivo.txt: para eliminar del repositorio
 
+LITTLE CHANGE ON GIT SITE
+
 
