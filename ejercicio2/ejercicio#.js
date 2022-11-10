@@ -1,4 +1,4 @@
-let empty= "";
+let empty= '                 ola                        ke                                                                                                                           ase';
 let space = "      ";
 let have = "Do We have A Hashtag";
 let test = "test";
@@ -9,10 +9,11 @@ let repeat140 = "a".repeat(140);
 
 const hashtag ="#"
 function mayuscula (variable){
-    if (variable === "" || variable.trim() === "" || variable.trim().length >= 140) {
+    let variableSinEspacio = variable.split(" ").join("");
+    if (variableSinEspacio === "" || variableSinEspacio.length >= 140) {
         return false;
     }   else { 
-        return variable = hashtag + variable.charAt(0).toUpperCase() + variable.slice(1).split(" ").join("");
+        return variableSinEspacio = hashtag + variableSinEspacio.charAt(0).toUpperCase() + variableSinEspacio.slice(1);
         }
 }  
 console.log(mayuscula(empty));
@@ -23,3 +24,4 @@ console.log(mayuscula(codewars));
 console.log(mayuscula(moreThan140));
 console.log(mayuscula(repeat139));
 console.log(mayuscula(repeat140));
+
