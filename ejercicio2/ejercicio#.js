@@ -9,6 +9,10 @@ let repeat140 = "a".repeat(140);
 
 const hashtag ="#"
 function mayuscula (variable){
+    //.split rompe el array dependiendo de donde se tenga la condicion .filter saca alv los espacios  .map
+    let spacesAndCapitalLetter = variable.split(' ')
+                                         .filter((deleteSpaces) => deleteSpaces != '')
+                                         .map(capitalLetter => capitalLetter[0].toUpperCase() + capitalLetter.slice(1));
     let variableSinEspacio = variable.split(" ").join("");
     if (variableSinEspacio === "" || variableSinEspacio.length >= 140) {
         return false;
@@ -24,4 +28,23 @@ console.log(mayuscula(codewars));
 console.log(mayuscula(moreThan140));
 console.log(mayuscula(repeat139));
 console.log(mayuscula(repeat140));
+
+
+let variable = 'estoy convirtiendome en mayusculas  tambien si  hay 2 espacios    o mas';
+let palabras = variable.split(' ')
+                       .filter((deleteSpaces) => deleteSpaces != '')
+                       .map(capitalLetter => capitalLetter[0].toUpperCase() + capitalLetter.slice(1))
+                       .toString();
+                       
+
+console.log(palabras);
+
+
+
+
+
+
+
+
+
 
