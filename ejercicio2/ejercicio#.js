@@ -11,8 +11,7 @@ let repeat140 = "a".repeat(140);
 function mayuscula (variable){
     //.split rompe el array dependiendo de donde se tenga la condicion .filter saca alv los espacios  .map
     let spacesAndCapitalLetter = variable.split(' ')
-                                         .filter((deleteSpaces) => deleteSpaces != '')
-                                         .map(capitalLetter => capitalLetter[0].toUpperCase() + capitalLetter.slice(1))
+                                         .map(capitalLetter => capitalLetter.charAt(0).toUpperCase() + capitalLetter.slice(1))
                                          .join('');
   
         if (spacesAndCapitalLetter === "" || spacesAndCapitalLetter.length >= 140) {
@@ -29,7 +28,6 @@ console.log(mayuscula(codewars));
 console.log(mayuscula(moreThan140));
 console.log(mayuscula(repeat139));
 console.log(mayuscula(repeat140));
-
 
 
 
