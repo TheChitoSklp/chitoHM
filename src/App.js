@@ -4,6 +4,7 @@ import CounterWithUseState from "./components/Welcome";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Contact from "./pages/Contact";
 import Contact2 from "./pages/Contact2";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -23,11 +24,15 @@ function App() {
               <li>
                 <Link to={"/contact2"}>Contacto2</Link>
               </li>
+              <li>
+                <Link to={"/profile"}>Profile</Link>
+              </li>
             </ul>
           </div>
           <Routes>
             <Route path="/contact" element={<Contact />} />
             <Route path="/contact2" element={<Contact2 />} />
+            <Route path="/profile/:name" element={<Profile />} />
           </Routes>
         </Router>
       </header>
