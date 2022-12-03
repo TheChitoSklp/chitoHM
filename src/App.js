@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import CounterWithUseState from "./components/Welcome";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Contact from "./pages/Contact";
+import Contact from "./pages/useContext";
 import Contact2 from "./pages/Contact2";
 import Profile from "./pages/Profile";
 
@@ -19,10 +19,10 @@ function App() {
                 <Link to={"/"}>Home</Link>
               </li>
               <li>
-                <Link to={"/contact"}>Contacto</Link>
+                <Link to={"/contact"}>useContext</Link>
               </li>
               <li>
-                <Link to={"/contact2"}>Contacto2</Link>
+                <Link to={"/contact2"}>useReduce</Link>
               </li>
               <li>
                 <Link to={"/profile"}>Profile</Link>
@@ -36,7 +36,9 @@ function App() {
           </Routes>
         </Router>
       </header>
+
     </div>
+  
   );
 }
 
